@@ -1,0 +1,84 @@
+
+<html>
+    <head>
+        <style>
+            #screen
+            {
+                width: 30%;
+                height: 40%;
+                border: solid 2px;
+
+            }
+        </style>
+ 
+    </head>
+    <body>
+        <div>
+            <input type="text" id="tbox1">
+
+            <button id="btn1" onclick="display()">
+                clickme
+            </button>
+            <p id="para1">
+
+            </p>
+        
+
+        </div>
+        <div>
+            <input type="text" id="tbox2">
+            <button  id="btn2" onclick="display2()">
+                Enter text and click
+            </button>
+            <p id="para2">
+                
+            </p>
+
+        </div>
+        <div id="screen">
+            
+
+        </div>
+        <div>
+            <button onclick="colorchange('red')">red</button>
+            <button onclick="colorchange('blue')">blue</button>
+            <button onclick="colorchange('yellow')">yellow</button>
+            <button onclick="colorchange('green')">green</button>
+        </div>
+       
+        
+        <script>
+            
+            //kili continuous
+           
+            
+
+            function display()
+            {
+                let tbox=document.getElementById("tbox1");
+                let paragraph=document.getElementById("para1");
+                paragraph.innerHTML=tbox.value;
+            }
+            function display2()
+            {
+                let tbox2=document.getElementById("tbox2");
+                let paragraph2=document.getElementById("para2"); 
+                if(tbox2.value=="Brototype")
+                {
+                    alert("You are great!")
+                }
+                else
+                {
+                    paragraph2.innerHTML=tbox2.value;
+                }
+            
+            }
+            function colorchange(color)
+            {
+                let screen=document.getElementById("screen");
+                screen.style.backgroundColor=color;
+            }
+
+        </script>
+    </body> 
+</html>
